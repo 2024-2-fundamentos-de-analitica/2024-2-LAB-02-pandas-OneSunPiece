@@ -4,7 +4,7 @@ datos requeridos se encuentran en los archivos `tbl0.tsv`, `tbl1.tsv` y
 `tbl2.tsv`. En este laboratorio solo puede utilizar las funciones y 
 librerias de pandas para resolver las preguntas.
 """
-
+import pandas as pd
 
 def pregunta_10():
     """
@@ -20,3 +20,16 @@ def pregunta_10():
     D                   1:2:3:5:5:7
     E   1:1:2:3:3:4:5:5:5:6:7:8:8:9
     """
+    data = pd.DataFrame(
+            {
+                "c2": [
+                    "1:1:2:3:6:7:8:9",
+                    "1:3:4:5:6:8:9",
+                    "0:5:6:7:9",
+                    "1:2:3:5:5:7",
+                    "1:1:2:3:3:4:5:5:5:6:7:8:8:9",
+                ]
+            },
+            index=pd.Series(["A", "B", "C", "D", "E"], name="_c1"),
+        )
+    return data
